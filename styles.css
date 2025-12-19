@@ -1,0 +1,782 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2563eb;
+    letter-spacing: -0.5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 100px 0 80px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 52px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero > p {
+    font-size: 22px;
+    margin-bottom: 50px;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 50px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 14px;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #1e293b;
+}
+
+.section-header p {
+    font-size: 18px;
+    color: #64748b;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Comparison Section */
+.comparison-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.comparison-grid {
+    display: grid;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.provider-card {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 40px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.provider-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.best-choice {
+    border-color: #2563eb;
+    box-shadow: 0 8px 30px rgba(37,99,235,0.15);
+}
+
+.badge-ribbon {
+    position: absolute;
+    top: -15px;
+    right: 40px;
+    background: #2563eb;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+}
+
+.badge-ribbon.budget {
+    background: #10b981;
+}
+
+.badge-ribbon.support {
+    background: #8b5cf6;
+}
+
+.provider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.provider-logo {
+    flex: 1;
+}
+
+.logo-placeholder {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.rating {
+    text-align: right;
+}
+
+.stars {
+    color: #fbbf24;
+    font-size: 24px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.rating-score {
+    color: #64748b;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.provider-details {
+    margin-bottom: 30px;
+}
+
+.price {
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.price-from {
+    display: block;
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.price-amount {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1e293b;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.features li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f5f9;
+    color: #475569;
+    font-size: 15px;
+}
+
+.features li:last-child {
+    border-bottom: none;
+}
+
+.pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid #f1f5f9;
+}
+
+.pros h4, .cons h4 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #1e293b;
+}
+
+.pros h4 {
+    color: #10b981;
+}
+
+.cons h4 {
+    color: #ef4444;
+}
+
+.pros ul, .cons ul {
+    list-style: none;
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.8;
+}
+
+.pros li::before {
+    content: "✓ ";
+    color: #10b981;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.cons li::before {
+    content: "• ";
+    color: #ef4444;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Buttons */
+.cta-button {
+    display: block;
+    background: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 18px 35px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.cta-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37,99,235,0.3);
+}
+
+.cta-button.primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.cta-button.primary:hover {
+    background: linear-gradient(135deg, #5568d3 0%, #6a4294 100%);
+}
+
+.cta-button.large {
+    padding: 22px 45px;
+    font-size: 18px;
+}
+
+.read-review {
+    display: block;
+    text-align: center;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.read-review:hover {
+    text-decoration: underline;
+}
+
+/* Comparison Table Section */
+.table-section {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.table-section h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    color: #1e293b;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.comparison-table thead {
+    background: #f8fafc;
+}
+
+.comparison-table th {
+    padding: 20px;
+    text-align: left;
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 16px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.comparison-table td {
+    padding: 20px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #475569;
+    font-size: 15px;
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.cta-row {
+    background: #f8fafc;
+}
+
+.table-cta {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.table-cta:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Reviews Section */
+.reviews-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.reviews-section h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 60px;
+    color: #1e293b;
+}
+
+.review-card {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 50px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.review-card h3 {
+    font-size: 32px;
+    color: #1e293b;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.review-rating {
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.review-rating .stars {
+    font-size: 28px;
+    margin-right: 15px;
+}
+
+.review-rating span:last-child {
+    font-size: 20px;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.review-content h4 {
+    font-size: 22px;
+    color: #1e293b;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.review-content p {
+    color: #475569;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.review-content ul, .review-content ol {
+    margin-left: 25px;
+    margin-bottom: 25px;
+    color: #475569;
+    line-height: 1.8;
+}
+
+.review-content ul li, .review-content ol li {
+    margin-bottom: 12px;
+}
+
+.review-content strong {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.review-content .cta-button {
+    margin-top: 40px;
+    display: inline-block;
+}
+
+/* Guide Section */
+.guide-section {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.guide-section h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 60px;
+    color: #1e293b;
+}
+
+.guide-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.guide-item {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.guide-item h3 {
+    font-size: 26px;
+    color: #1e293b;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.guide-item p {
+    color: #475569;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.guide-item ul, .guide-item ol {
+    margin-left: 25px;
+    margin-bottom: 20px;
+    color: #475569;
+    line-height: 1.8;
+}
+
+.guide-item li {
+    margin-bottom: 10px;
+}
+
+.guide-item strong {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 60px;
+    color: #1e293b;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.faq-item {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.faq-item h3 {
+    font-size: 20px;
+    color: #1e293b;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.faq-item p {
+    color: #475569;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Final CTA */
+.final-cta {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+}
+
+.final-cta h2 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.final-cta p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Footer */
+footer {
+    background: #1e293b;
+    color: #cbd5e1;
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-section h4 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #334155;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #94a3b8;
+}
+
+.footer-bottom strong {
+    color: #cbd5e1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .hero > p {
+        font-size: 18px;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    nav ul {
+        gap: 20px;
+    }
+    
+    nav a {
+        font-size: 14px;
+    }
+    
+    .section-header h2,
+    .table-section h2,
+    .reviews-section h2,
+    .guide-section h2,
+    .faq-section h2,
+    .final-cta h2 {
+        font-size: 32px;
+    }
+    
+    .pros-cons {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .review-card,
+    .guide-item {
+        padding: 30px 25px;
+    }
+    
+    .provider-card {
+        padding: 30px 25px;
+    }
+    
+    .comparison-table {
+        font-size: 14px;
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+        padding: 15px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero {
+        padding: 60px 0 50px;
+    }
+    
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+}
